@@ -1089,13 +1089,15 @@ const short temptable_70[][2] PROGMEM = {
   {  1021.1802909627*OVERSAMPLENR ,  35 },
   {  1021.58459281248*OVERSAMPLENR ,  30 },
   {  1021.90701441192*OVERSAMPLENR ,  25 },
-  {  1022.16215103698*OVERSAMPLENR ,  20 },
-  {  1022.36275529549*OVERSAMPLENR ,  15 },
-  {  1022.51930392497*OVERSAMPLENR ,  10 },
-  {  1022.64051573734*OVERSAMPLENR ,  5 },
-  {  1022.73355805611*OVERSAMPLENR ,  0 }
+  {  1022.16215103698*OVERSAMPLENR ,  25 },
+  {  1022.36275529549*OVERSAMPLENR ,  25 },
+  {  1022.51930392497*OVERSAMPLENR ,  25 },
+  {  1022.64051573734*OVERSAMPLENR ,  25 },
+  {  1022.73355805611*OVERSAMPLENR ,  25 }
 };
 #endif
+/* https://groups.google.com/forum/#!topic/pico-support/Tm53XFxOm0k */
+/* Thermistor reading 0 is a known issue. Resolution is a 'better' table or/and turning min temp to 0 in Configuration.h */
 
 #define _TT_NAME(_N) temptable_ ## _N
 #define TT_NAME(_N) _TT_NAME(_N)
